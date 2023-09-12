@@ -82,7 +82,7 @@ def evaluate(args, model, features, tag="dev"):
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--data_dir", default="../../", type=str)
+    parser.add_argument("--data_dir", default="/data", type=str)
     parser.add_argument("--model_name_or_path", default="bert-base-cased", type=str)
     parser.add_argument("--max_seq_length", default=512, type=int)
 
