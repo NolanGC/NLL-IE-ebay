@@ -120,7 +120,7 @@ def main():
     train_features = read_conll(train_file, tokenizer, max_seq_length=args.max_seq_length)
     dev_features = read_conll(dev_file, tokenizer, max_seq_length=args.max_seq_length)
     test_features = read_conll(test_file, tokenizer, max_seq_length=args.max_seq_length)
-    testre_features = read_conll(testre_file, tokenizer, max_seq_length=args.max_seq_length)
+    #testre_features = read_conll(testre_file, tokenizer, max_seq_length=args.max_seq_length)
 
     benchmarks = (
         ("dev", dev_features),
