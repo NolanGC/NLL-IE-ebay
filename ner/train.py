@@ -82,7 +82,7 @@ def evaluate(args, model, features, tag="dev"):
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--data_dir", default="./data", type=str)
+    parser.add_argument("--data_dir", default="../", type=str)
     parser.add_argument("--model_name_or_path", default="bert-base-cased", type=str)
     parser.add_argument("--max_seq_length", default=512, type=int)
 
@@ -113,9 +113,9 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
     model = NLLModel(args)
 
-    train_file = os.path.join(args.data_dir, "train.txt")
-    dev_file = os.path.join(args.data_dir, "dev.txt")
-    test_file = os.path.join(args.data_dir, "test.txt")
+    train_file = os.path.join(args.data_dir, "train_data.txt")
+    dev_file = os.path.join(args.data_dir, "dev_data.txt")
+    test_file = os.path.join(args.data_dir, "test_data.txt")
     testre_file = os.path.join(args.data_dir, "conllpp_test.txt")
     train_features = read_conll(train_file, tokenizer, max_seq_length=args.max_seq_length)
     dev_features = read_conll(dev_file, tokenizer, max_seq_length=args.max_seq_length)
