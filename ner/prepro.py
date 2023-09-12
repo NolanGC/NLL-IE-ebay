@@ -1,9 +1,9 @@
 import truecase
 import re
 # CONLL
-LABEL_TO_ID = {'O': 0, 'B-MISC': 1, 'I-MISC': 2, 'B-PER': 3, 'I-PER': 4, 'B-ORG': 5, 'I-ORG': 6, 'B-LOC': 7, 'I-LOC': 8}
+#LABEL_TO_ID = {'O': 0, 'B-MISC': 1, 'I-MISC': 2, 'B-PER': 3, 'I-PER': 4, 'B-ORG': 5, 'I-ORG': 6, 'B-LOC': 7, 'I-LOC': 8}
 # EBAY
-#LABEL_TO_ID = {'<unk>': 0, 'nan': 1, 'No_Tag': 2, 'Marke': 3, 'Produktart': 4, 'Modell': 5, 'Abteilung': 6, 'Stil': 7, 'Farbe': 8, 'Herstellernummer': 9, 'Produktlinie': 10, 'EU-Schuhgröße': 11, 'Obermaterial': 12, 'Schuhschaft-Typ': 13, 'Anlass': 14, 'Aktivität': 15, 'Besonderheiten': 16, 'US-Schuhgröße': 17, 'Verschluss': 18, 'UK-Schuhgröße': 19, 'Thema': 20, 'Gewebeart': 21, 'Obscure': 22, 'Akzente': 23, 'Erscheinungsjahr': 24, 'Muster': 25, 'Zwischensohlen-Typ': 26, 'Herstellungsland': 27, 'Jahreszeit': 28, 'Maßeinheit': 29, 'Dämpfungsgrad': 30, 'Innensohlenmaterial': 31, 'Schuhweite': 32, 'Laufsohlenmaterial': 33, 'Futtermaterial': 34, 'Charakter': 35, 'CF': 36, 'Stollentyp': 37}
+LABEL_TO_ID = {'<unk>': 0, 'nan': 1, 'No_Tag': 2, 'Marke': 3, 'Produktart': 4, 'Modell': 5, 'Abteilung': 6, 'Stil': 7, 'Farbe': 8, 'Herstellernummer': 9, 'Produktlinie': 10, 'EU-Schuhgröße': 11, 'Obermaterial': 12, 'Schuhschaft-Typ': 13, 'Anlass': 14, 'Aktivität': 15, 'Besonderheiten': 16, 'US-Schuhgröße': 17, 'Verschluss': 18, 'UK-Schuhgröße': 19, 'Thema': 20, 'Gewebeart': 21, 'Obscure': 22, 'Akzente': 23, 'Erscheinungsjahr': 24, 'Muster': 25, 'Zwischensohlen-Typ': 26, 'Herstellungsland': 27, 'Jahreszeit': 28, 'Maßeinheit': 29, 'Dämpfungsgrad': 30, 'Innensohlenmaterial': 31, 'Schuhweite': 32, 'Laufsohlenmaterial': 33, 'Futtermaterial': 34, 'Charakter': 35, 'CF': 36, 'Stollentyp': 37}
 
 def true_case(tokens):
     word_lst = [(w, idx) for idx, w in enumerate(tokens) if all(c.isalpha() for c in w)]
