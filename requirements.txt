@@ -1,0 +1,7 @@
+torch>=1.8.1
+transformers>=3.4.0
+wandb
+ujson
+tqdm
+truecase
+seqeval
