@@ -116,7 +116,7 @@ def main():
     train_file = os.path.join(args.data_dir, "train_data.txt")
     dev_file = os.path.join(args.data_dir, "dev_data.txt")
     test_file = os.path.join(args.data_dir, "test_data.txt")
-    testre_file = os.path.join(args.data_dir, "conllpp_test.txt")
+    #testre_file = os.path.join(args.data_dir, "conllpp_test.txt")
     train_features = read_conll(train_file, tokenizer, max_seq_length=args.max_seq_length)
     dev_features = read_conll(dev_file, tokenizer, max_seq_length=args.max_seq_length)
     test_features = read_conll(test_file, tokenizer, max_seq_length=args.max_seq_length)
@@ -125,7 +125,7 @@ def main():
     benchmarks = (
         ("dev", dev_features),
         ("test", test_features),
-        ("test_rev", testre_features)
+        #("test_rev", testre_features)
     )
 
     train(args, model, train_features, benchmarks)
